@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop Practice Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f7f9fc;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .question {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .correct {
+            background-color: #2ecc71 !important;
+        }
+        .wrong {
+            background-color: #e74c3c !important;
+        }
+        #score {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Workshop Practice Quiz</h1>
+    <div id="quiz">
+<div class="question" id="q0">
+        <p><strong>Q1:</strong> A neutral flame is produced when acetylene and oxygen are in the ratio of —</p>
+        <button onclick="checkAnswer(this, '1:1')">1:1</button>
+        <button onclick="checkAnswer(this, '1:1')">2:1</button>
+    </div><div class="question" id="q1">
+        <p><strong>Q2:</strong> The safety device used during arc welding for protection of eye is —</p>
+        <button onclick="checkAnswer(this, 'Welder helmet')">Black glasses</button>
+        <button onclick="checkAnswer(this, 'Welder helmet')">Welder helmet</button>
+    </div><div class="question" id="q2">
+        <p><strong>Q3:</strong> निम्नमध्ये कुन व्यक्तिगत सुरक्षा उपकरण हो?</p>
+        <button onclick="checkAnswer(this, 'हेल्मेट')">पाना</button>
+        <button onclick="checkAnswer(this, 'हेल्मेट')">हेल्मेट</button>
+    </div><div class="question" id="q3">
+        <p><strong>Q4:</strong> Which of the following is used as cooling coil in air conditioning system?</p>
+        <button onclick="checkAnswer(this, 'Evaporator')">Condenser</button>
+        <button onclick="checkAnswer(this, 'Evaporator')">Evaporator</button>
+    </div><div class="question" id="q4">
+        <p><strong>Q5:</strong> Feeler gauge is used to check —</p>
+        <button onclick="checkAnswer(this, 'Clearance between two mating surfaces')">Clearance between two mating surfaces</button>
+        <button onclick="checkAnswer(this, 'Clearance between two mating surfaces')">Internal diameter</button>
+    </div><div class="question" id="q5">
+        <p><strong>Q6:</strong> Which is the smallest measurement that is possible by vernier caliper?</p>
+        <button onclick="checkAnswer(this, 'Least count 0.01 mm')">Least count 0.01 mm</button>
+        <button onclick="checkAnswer(this, 'Least count 0.01 mm')">Main scale division</button>
+    </div><div class="question" id="q6">
+        <p><strong>Q7:</strong> Which of the following gauge is used to measure diameter of shaft?</p>
+        <button onclick="checkAnswer(this, 'Snap gauge')">Feeler gauge</button>
+        <button onclick="checkAnswer(this, 'Snap gauge')">Snap gauge</button>
+    </div><div class="question" id="q7">
+        <p><strong>Q8:</strong> The accuracy of micrometer, caliper and dial indicator can be checked by —</p>
+        <button onclick="checkAnswer(this, 'Slip gauge')">Feeler gauge</button>
+        <button onclick="checkAnswer(this, 'Slip gauge')">Slip gauge</button>
+    </div><div class="question" id="q8">
+        <p><strong>Q9:</strong> The edge of sheet metal made by folding is called —</p>
+        <button onclick="checkAnswer(this, 'Hem')">Hem</button>
+        <button onclick="checkAnswer(this, 'Hem')">Seam</button>
+    </div><div class="question" id="q9">
+        <p><strong>Q10:</strong> Piece of sheet metal made by folding is called:</p>
+        <button onclick="checkAnswer(this, 'All of the above')">Bend</button>
+        <button onclick="checkAnswer(this, 'All of the above')">All of the above</button>
+    </div><div class="question" id="q10">
+        <p><strong>Q11:</strong> The process of embossing a diamond shape pattern on the surface of workpiece is —</p>
+        <button onclick="checkAnswer(this, 'Knurling')">Knurling</button>
+        <button onclick="checkAnswer(this, 'Knurling')">Drilling</button>
+    </div><div class="question" id="q11">
+        <p><strong>Q12:</strong> Arc welding with DC current generates more heat at —</p>
+        <button onclick="checkAnswer(this, 'Positive pole')">Positive pole</button>
+        <button onclick="checkAnswer(this, 'Positive pole')">Negative pole</button>
+    </div><div class="question" id="q12">
+        <p><strong>Q13:</strong> Which of the following welding method uses a pool of molten metal?</p>
+        <button onclick="checkAnswer(this, 'MIG arc welding')">TIG arc welding</button>
+        <button onclick="checkAnswer(this, 'MIG arc welding')">MIG arc welding</button>
+    </div><div class="question" id="q13">
+        <p><strong>Q14:</strong> The coating in the welding electrode is called:</p>
+        <button onclick="checkAnswer(this, 'Flux')">Flux</button>
+        <button onclick="checkAnswer(this, 'Flux')">Slag</button>
+    </div><div class="question" id="q14">
+        <p><strong>Q15:</strong> The main function of the cutting fluid is —</p>
+        <button onclick="checkAnswer(this, 'To cool the tool and workpiece')">To provide lubrication</button>
+        <button onclick="checkAnswer(this, 'To cool the tool and workpiece')">To cool the tool and workpiece</button>
+    </div><div class="question" id="q15">
+        <p><strong>Q16:</strong> Cutting tool को बिट निर्माण गर्न प्रयोग गरिने पदार्थ कुन हो?</p>
+        <button onclick="checkAnswer(this, 'High speed steel')">High carbon steel</button>
+        <button onclick="checkAnswer(this, 'High speed steel')">High speed steel</button>
+    </div><div class="question" id="q16">
+        <p><strong>Q17:</strong> Spiral gear is made by —</p>
+        <button onclick="checkAnswer(this, 'Milling machine')">Lathe machine</button>
+        <button onclick="checkAnswer(this, 'Milling machine')">Milling machine</button>
+    </div><div class="question" id="q17">
+        <p><strong>Q18:</strong> The part of shaper machine which reciprocates during operation is called —</p>
+        <button onclick="checkAnswer(this, 'Ram')">Table</button>
+        <button onclick="checkAnswer(this, 'Ram')">Ram</button>
+    </div><div class="question" id="q18">
+        <p><strong>Q19:</strong> Which of the following is not a cutting fluid?</p>
+        <button onclick="checkAnswer(this, 'Gasoline')">Soluble oil</button>
+        <button onclick="checkAnswer(this, 'Gasoline')">Gasoline</button>
+    </div><div class="question" id="q19">
+        <p><strong>Q20:</strong> Which of the following is the motion of the tool in shaping?</p>
+        <button onclick="checkAnswer(this, 'Reciprocating')">Reciprocating</button>
+        <button onclick="checkAnswer(this, 'Reciprocating')">Stationary</button>
+    </div><div class="question" id="q20">
+        <p><strong>Q21:</strong> Which of the following is used for machining larger jobs?</p>
+        <button onclick="checkAnswer(this, 'Planner')">Planner</button>
+        <button onclick="checkAnswer(this, 'Planner')">Shaper</button>
+    </div><div class="question" id="q21">
+        <p><strong>Q22:</strong> The tool post in shaper is mounted on —</p>
+        <button onclick="checkAnswer(this, 'Clapper block')">Apron</button>
+        <button onclick="checkAnswer(this, 'Clapper block')">Clapper block</button>
+    </div><div class="question" id="q22">
+        <p><strong>Q23:</strong> Which welding defects are common?</p>
+        <button onclick="checkAnswer(this, 'All of the above')">NDT</button>
+        <button onclick="checkAnswer(this, 'All of the above')">All of the above</button>
+    </div><div class="question" id="q23">
+        <p><strong>Q24:</strong> Radiographic testing is a type of —</p>
+        <button onclick="checkAnswer(this, 'Non-destructive testing (NDT)')">Destructive testing</button>
+        <button onclick="checkAnswer(this, 'Non-destructive testing (NDT)')">Non-destructive testing (NDT)</button>
+    </div><div class="question" id="q24">
+        <p><strong>Q25:</strong> The gas used in TIG welding is —</p>
+        <button onclick="checkAnswer(this, 'Argon')">Hydrogen</button>
+        <button onclick="checkAnswer(this, 'Argon')">Argon</button>
+    </div><div class="question" id="q25">
+        <p><strong>Q26:</strong> Pre-filler material used in soldering is —</p>
+        <button onclick="checkAnswer(this, 'An alloy of tin and lead')">Zinc and copper</button>
+        <button onclick="checkAnswer(this, 'An alloy of tin and lead')">An alloy of tin and lead</button>
+    </div><div class="question" id="q26">
+        <p><strong>Q27:</strong> Acetylene gas is stored —</p>
+        <button onclick="checkAnswer(this, 'Liquid form')">Gaseous form</button>
+        <button onclick="checkAnswer(this, 'Liquid form')">Liquid form</button>
+    </div><div class="question" id="q27">
+        <p><strong>Q28:</strong> ग्यासको बोतल खोल्नु अघि के गर्नुपर्छ?</p>
+        <button onclick="checkAnswer(this, 'नोजल सफा गर्नु')">ग्यास फ्लो टेष्ट गर्नु</button>
+        <button onclick="checkAnswer(this, 'नोजल सफा गर्नु')">नोजल सफा गर्नु</button>
+    </div><div class="question" id="q28">
+        <p><strong>Q29:</strong> Fitter grip प्रयोग गरिन्छ —</p>
+        <button onclick="checkAnswer(this, 'Hexagonal block जोड्न')">Sheet metal काट्न</button>
+        <button onclick="checkAnswer(this, 'Hexagonal block जोड्न')">Hexagonal block जोड्न</button>
+    </div><div class="question" id="q29">
+        <p><strong>Q30:</strong> Two metal sheets joined by folding is called —</p>
+        <button onclick="checkAnswer(this, 'Seam')">Hem</button>
+        <button onclick="checkAnswer(this, 'Seam')">Seam</button>
+    </div><div class="question" id="q30">
+        <p><strong>Q31:</strong> File is used in metal workshop to —</p>
+        <button onclick="checkAnswer(this, 'Remove small amounts of material')">Tighten screws</button>
+        <button onclick="checkAnswer(this, 'Remove small amounts of material')">Remove small amounts of material</button>
+    </div><div class="question" id="q31">
+        <p><strong>Q32:</strong> Tap and die are used for —</p>
+        <button onclick="checkAnswer(this, 'Thread cutting')">Welding</button>
+        <button onclick="checkAnswer(this, 'Thread cutting')">Thread cutting</button>
+    </div><div class="question" id="q32">
+        <p><strong>Q33:</strong> Brazing is a method of —</p>
+        <button onclick="checkAnswer(this, 'Joining metals by melting a filler metal')">Cutting metals</button>
+        <button onclick="checkAnswer(this, 'Joining metals by melting a filler metal')">Joining metals by melting a filler metal</button>
+    </div><div class="question" id="q33">
+        <p><strong>Q34:</strong> Oxygen gas cutting uses —</p>
+        <button onclick="checkAnswer(this, 'Oxygen + Fuel gas')">Compressed air only</button>
+        <button onclick="checkAnswer(this, 'Oxygen + Fuel gas')">Oxygen + Fuel gas</button>
+    </div><div class="question" id="q34">
+        <p><strong>Q35:</strong> The coating in welding electrode is —</p>
+        <button onclick="checkAnswer(this, 'Flux')">Flux</button>
+        <button onclick="checkAnswer(this, 'Flux')">Paint</button>
+    </div><div class="question" id="q35">
+        <p><strong>Q36:</strong> Which part of the shaper supports the workpiece?</p>
+        <button onclick="checkAnswer(this, 'Table')">Table</button>
+        <button onclick="checkAnswer(this, 'Table')">Saddle</button>
+    </div><div class="question" id="q36">
+        <p><strong>Q37:</strong> A vernier caliper is mainly used for —</p>
+        <button onclick="checkAnswer(this, 'Length measurement')">Weight</button>
+        <button onclick="checkAnswer(this, 'Length measurement')">Length measurement</button>
+    </div><div class="question" id="q37">
+        <p><strong>Q38:</strong> Plumbing joints commonly used in pipelines include —</p>
+        <button onclick="checkAnswer(this, 'B-joint')">J-joint</button>
+        <button onclick="checkAnswer(this, 'B-joint')">B-joint</button>
+    </div>
+    </div>
+    <div id="score">Score: 0 / 40</div>
+    <script>
+        let score = 0;
+        function checkAnswer(button, correctAnswer) {
+            const allBtns = button.parentNode.querySelectorAll('button');
+            allBtns.forEach(btn => {
+                btn.disabled = true;
+                if (btn.innerText === correctAnswer) {
+                    btn.classList.add('correct');
+                } else if (btn === button) {
+                    btn.classList.add('wrong');
+                }
+            });
+            if (button.innerText === correctAnswer) {
+                score++;
+            }
+            document.getElementById('score').innerText = `Score: ${score} / 40`;
+        }
+    </script>
+</body>
+</html>
